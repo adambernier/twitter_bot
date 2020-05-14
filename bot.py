@@ -9,11 +9,6 @@ auth.set_access_token(os.environ.get("ACCESS_TOKEN"),
                       os.environ.get("ACCESS_TOKEN_SECRET"))
 api = tweepy.API(auth)
 
-#conn = redis.Redis(host='ec2-52-22-113-93.compute-1.amazonaws.com',
-#                   port=14719,
-#                   password='p5fbb6f2876f58aed4b4718076994ea36966ef20e196a5d968d49f12484456d5f')
-#r = redis.from_url('redis://h:p5fbb6f2876f58aed4b4718076994ea36966ef20e196a5d968d49f12484456d5f@ec2-52-22-113-93.compute-1.amazonaws.com:14719')
-
 chain = pickle.loads(r.get('chain'))
 
 new_review = []
